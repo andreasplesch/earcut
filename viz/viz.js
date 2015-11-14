@@ -31,7 +31,7 @@ for (var i = 0; i < testPoints[0].length; i++) {
 var width = maxX - minX,
     height = maxY - minY;
 
-canvas.width = window.innerWidth;
+canvas.width = window.innerWidth/2;
 canvas.height = canvas.width * height / width + 10;
 
 var ratio = (canvas.width - 10) / width;
