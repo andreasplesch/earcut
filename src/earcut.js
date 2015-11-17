@@ -37,7 +37,7 @@ function earcut(data, holeIndices, dim) {
     }
 
     earcutLinked(outerNode, triangles, dim, minX, minY, size);
-    if clockwise === false {triangles.reverse();}
+    if (clockwise === false) {triangles.reverse();}
     return triangles;
 }
 
@@ -57,7 +57,7 @@ function linkedList(data, start, end, dim, clockwise, oclockwise) {
     var i, j, last;
 
     // link points into circular doubly-linked list in the specified winding order
-    if (clockwise === oclockwise {
+    if (clockwise === oclockwise) {
         for (i = start; i < end; i += dim) last = insertNode(i, data[i], data[i + 1], last);
     } else {
         for (i = end - dim; i >= start; i -= dim) last = insertNode(i, data[i], data[i + 1], last);
