@@ -43,13 +43,13 @@ function earcut(data, holeIndices, dim) {
 
 // calculate original winding order of a polygon ring
 function windingOrder(data, start, end, dim) {
-		var sum = 0;
+	var sum = 0, i, j;
     for (i = start, j = end - dim; i < end; i += dim) {
         sum += (data[j] - data[i]) * (data[i + 1] + data[j + 1]);
         j = i;
     }
 	  //true for clockwise
-	  return sum > 0;
+	return sum > 0;
 }
 
 // create a circular doubly linked list from polygon points in the specified winding order
